@@ -465,7 +465,7 @@ async function uploadPdfToMonday(leadItemId, pdfBlob, fileName) {
   formData.append("query", mutation);
   formData.append("variables[file]", pdfBlob, fileName);
 
-  const res = await fetch("https://api.monday.com/v2/file", {
+  const res = await fetch("/monday-file/v2/file",", {
     method: "POST",
     headers: {
       "Authorization": ENV.API_TOKEN,
